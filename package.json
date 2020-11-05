@@ -1,18 +1,42 @@
 {
-  "name": "with-react-bootstrap",
+  "name": "netlify-login",
   "version": "0.1.0",
-  "author": "Wenzhi Li",
+  "author": "",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.10.0",
     "bootstrap": "^4.4.1",
-    "next": "latest",
+    "bootstrap-darkmode": "^0.7.0",
+    "netlify-identity-widget": "^1.9.1",
+    "next": "^10.0.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-import-script": "^0.1.0",
+    "react-load-script": "^0.0.6",
+    "react-scripts": "^4.0.0",
+    "react-swipeable-views": "^0.13.9",
+    "styled-components": "^5.2.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
