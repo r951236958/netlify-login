@@ -1,7 +1,7 @@
 {
   "name": "netlify-login",
   "version": "0.1.0",
-  "author": "",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
