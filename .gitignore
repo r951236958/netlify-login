@@ -75,6 +75,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+package-lock.json
 
 # TypeScript v1 declaration files
 typings/
@@ -185,3 +186,4 @@ yarn.lock
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
+build/
