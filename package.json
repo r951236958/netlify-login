@@ -15,6 +15,7 @@
     "@material-ui/styles": "^4.10.0",
     "bootstrap": "^4.4.1",
     "bootstrap-darkmode": "^0.7.0",
+    "materialize-css": "^1.0.0-rc.2",
     "netlify-identity-widget": "^1.9.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",

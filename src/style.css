@@ -1,0 +1,194 @@
+body {
+  font-size: 14px;
+}
+
+.Btn {
+  color: #fff;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.Btn:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.Btn.Mui-disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
+@media (hover: none) {
+  .Btn:hover {
+    background-color: transparent;
+  }
+}
+.Btn:hover.Mui-disabled {
+  background-color: transparent;
+}
+
+
+.Btn {
+  padding: 6px 8px;
+}
+.BtnPrimary {
+  color: #ffeb3b;
+}
+.BtnPrimary:hover {
+  background-color: rgba(255, 235, 59, 0.08);
+}
+@media (hover: none) {
+  .BtnPrimary:hover {
+    background-color: transparent;
+  }
+}
+.BtnSecondary {
+  color: #ec407a;
+}
+.BtnSecondary:hover {
+  background-color: rgba(236, 64, 122, 0.08);
+}
+@media (hover: none) {
+  .BtnSecondary:hover {
+    background-color: transparent;
+  }
+}
+
+.Btn2 {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+  background-color: #e0e0e0;
+}
+.Btn2:hover {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+  background-color: #d5d5d5;
+}
+.Btn2.Mui-focusVisible {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.Btn2:active {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.Btn2.Mui-disabled {
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+@media (hover: none) {
+  .Btn2:hover {
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+    background-color: #e0e0e0;
+  }
+}
+.Btn2:hover.Mui-disabled {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.BtnPrimary {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffeb3b;
+}
+.BtnPrimary:hover {
+  background-color: rgb(178, 164, 41);
+}
+@media (hover: none) {
+  .BtnPrimary:hover {
+    background-color: #ffeb3b;
+  }
+}
+.BtnSecondary {
+  color: #fff;
+  background-color: #ec407a;
+}
+.BtnSecondary:hover {
+  background-color: rgb(165, 44, 85);
+}
+@media (hover: none) {
+  .BtnSecondary:hover {
+    background-color: #ec407a;
+  }
+}
+
+a.BtnOutlined {
+  color: 1px solid rgba(255, 255, 255, 0.23);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  padding: 5px 15px;
+}
+
+a.Btn:hover, a.BtnOutlined:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+
+.BtnOutlinedPrimary {
+  color: #ffeb3b;
+  border: 1px solid rgba(255, 235, 59, 0.5);
+}
+
+.BtnOutlinedPrimary:hover {
+  border: 1px solid #ffeb3b;
+  background-color: rgba(255, 235, 59, 0.08);
+}
+
+a.BtnOutlinedPrimary:hover {
+  color: 1px solid #ffeb3b;
+}
+
+.BtnOutlinedSecondary {
+  color: #ec407a;
+  border: 1px solid rgba(236, 64, 122, 0.5);
+}
+
+.BtnOutlinedSecondary:hover {
+  border: 1px solid #ec407a;
+  background-color: rgba(236, 64, 122, 0.08);
+}
+
+a.BtnOutlinedSecondary:hover {
+  color: 1px solid #ec407a;
+}
+
+.BtnOutlined {
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  padding: 5px 15px;
+}
+.BtnOutlined.disabled {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.BtnOutlinedPrimary {
+  color: #ffeb3b;
+  border: 1px solid rgba(255, 235, 59, 0.5);
+}
+.BtnOutlinedPrimary:hover {
+  border: 1px solid #ffeb3b;
+  background-color: rgba(255, 235, 59, 0.08);
+}
+@media (hover: none) {
+  .BtnOutlinedPrimary:hover {
+    background-color: transparent;
+  }
+}
+.BtnOutlinedSecondary {
+  color: #ec407a;
+  border: 1px solid rgba(236, 64, 122, 0.5);
+}
+.BtnOutlinedSecondary:hover {
+  border: 1px solid #ec407a;
+  background-color: rgba(236, 64, 122, 0.08);
+}
+.BtnOutlinedSecondary.disabled {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+@media (hover: none) {
+  .BtnOutlinedSecondary:hover {
+    background-color: transparent;
+  }
+}

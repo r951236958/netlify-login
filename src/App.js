@@ -1,34 +1,34 @@
-import React from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-//import Link from '@material-ui/core/Link';
-import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import ProTip from './ProTip';
-
-import Protected from './Protected';
-import Public from './Public';
+//import Link from '@material-ui/core/Link';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
+import Paper from '@material-ui/core/Paper';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import netlifyIdentity from 'netlify-identity-widget';
+import React from 'react';
 import {
   BrowserRouter as Router,
+
+  Link, Redirect,
+
   Route,
-  Redirect,
   withRouter
 } from 'react-router-dom';
+//import './index.css';
+//import netlifyAuth from './netlifyAuth.js';
+import Protected from './Protected';
+import Public from './Public';
+import './style.css';
+import './theme.js';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+const darktheme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  },
+});
+
 
 // copied straight from https://reacttraining.com/react-router/web/example/auth-workflow
 ////////////////////////////////////////////////////////////
@@ -40,39 +40,34 @@ function Copyright() {
 function AuthExample() {
   return (
     <Router>
+    <ThemeProvider theme={darktheme}>
+
+    
       <Container maxWidth="sm">
         <Box my={8}>
-          <Route path="/public" component={Public} />
-          <Route path="/login" component={Login} />
-          <PrivateRoute path="/protected" component={Protected} />
-          <Grid container spacing={2}>
-            <Grid item xs={6} sm={12}>
-                <Button 
-                  href="/public"
-                  variant="outlined" 
-                  color="secondary"
-                  text-align="center"
-                  >
-                    Public Page
-                  </Button>
-
-            </Grid>
-            <Grid item xs={6} sm={12}>
-              
-              <Button 
-                href="/protected"
-                variant="outlined" 
-                color="primary"
-                text-align="center"
-                >
-                  Protected Page
-                </Button>
-
-            </Grid>
-          </Grid>
-          <AuthButton />
+        <AuthButton />
+        
+        <Grid container spacing={1}>
+      <Grid item xs={12} sm={8}>
+      <Paper elevation={3}>
+          <MenuList>
+            <MenuItem><Link to="/public" className="Btn BtnOutlinedPrimary">Public Page</Link></MenuItem>
+            <MenuItem><Link to="/protected" className="Btn BtnOutlinedSecondary">Protected Page</Link></MenuItem>
+          </MenuList>
+        </Paper>
+      </Grid>
+      <Grid item xs={12} sm={8}>
+        <Box bgcolor="bk.main" color="secondary.contrastText" p={2}>
+        <Route path="/public" component={Public} />
+        <Route path="/login" component={Login} />
+        <PrivateRoute path="/protected" component={Protected} />
+        </Box>
+      </Grid>
+    </Grid>
+        
         </Box>
       </Container>
+      </ThemeProvider>
     </Router>
   );
 }
@@ -80,6 +75,13 @@ function AuthExample() {
 const netlifyAuth = {
   isAuthenticated: false,
   user: null,
+  initialize(callback) {
+    window.netlifyIdentity = netlifyIdentity
+    netlifyIdentity.on('init', (user) => {
+      callback(user)
+    })
+    netlifyIdentity.init()
+  },
   authenticate(callback) {
     this.isAuthenticated = true;
     netlifyIdentity.open();
@@ -103,23 +105,20 @@ const AuthButton = withRouter(
     netlifyAuth.isAuthenticated ? (
       <p>
         Welcome!{' '}
-        <Button 
-          variant="outlined" 
-          color="secondary"
+        <button
+        className="Btn BtnOutlined"
           onClick={() => {
             netlifyAuth.signout(() => history.push('/'));
           }}
         >
           Sign out
-        </Button>
+        </button>
       </p>
     ) : (
-        <Typography component="div" gutterBottom spacing={4}>
-          <p>You are not logged in.</p>
-        </Typography>
-
+      <p>You are not logged in.</p>
     )
 );
+
 
 function PrivateRoute({ component: Component, ...rest }) {
   return (
@@ -157,19 +156,10 @@ class Login extends React.Component {
     if (redirectToReferrer) return <Redirect to={from} />;
 
     return (
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={12}>
-          <Typography component="div" gutterBottom>
-            <p>You must log in to view the page at {from.pathname}</p>
-            <Button
-              variant="contained" 
-              color="primary"
-              onClick={this.login}>
-              Log in
-            </Button>
-          </Typography>
-        </Grid>
-      </Grid>
+      <div>
+        <p>You must log in to view the page at {from.pathname}</p>
+        <button onClick={this.login} className="Btn BtnOutlinedPrimary">Log in</button>
+      </div>
     );
   }
 }

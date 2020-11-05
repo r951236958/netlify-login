@@ -24,3 +24,49 @@
   height: 1em;
   margin-left: 10px;
 }
+
+.Btn-root {
+  color: #fff;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+
+
+.Btn-outlined {
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  padding: 5px 15px;
+}
+
+.Btn-root:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.Btn-outlinedPrimary {
+  color: #ffeb3b;
+  border: 1px solid rgba(255, 235, 59, 0.5);
+}
+
+.Btn-outlinedPrimary:hover {
+  border: 1px solid #ffeb3b;
+  background-color: rgba(255, 235, 59, 0.08);
+}
+
+.Btn-outlinedSecondary {
+  color: #ec407a;
+  border: 1px solid rgba(236, 64, 122, 0.5);
+}
+
+.Btn-outlinedSecondary:hover {
+  border: 1px solid #ec407a;
+  background-color: rgba(236, 64, 122, 0.08);
+}
