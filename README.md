@@ -2,6 +2,11 @@
 
 This example shows how to use Next.js along with [react-bootstrap](https://react-bootstrap.github.io/).
 
+## Netlify Identity Widget
+
+[The GitHub repositorie.](https://github.com/netlify/netlify-identity-widget)
+
+
 ## Deploy your own
 
 Deploy the example using [Vercel](https://vercel.com):
